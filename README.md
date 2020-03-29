@@ -10,15 +10,15 @@ yarn add vue-router-progressbar
 
 ## Usage
 
-```
+```js
 import "vue-router-progressbar/dist/index.css";
 import VueRouterProgressbar from "vue-router-progressbar";
-Vue.use(VueRouterProgressbar, options)
+Vue.use(VueRouterProgressbar, options) // all instance config 
 ```
 
-```
+```html
 <router-view></router-view>
-<router-progressbar :options="options" />
+<router-progressbar :options="options" /> <!-- this instance config -->
 ```
 
 ## Options
