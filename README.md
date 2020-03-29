@@ -17,7 +17,6 @@ Vue.use(VueRouterProgressbar, options) // all instance config
 ```
 
 ```html
-<router-view></router-view>
 <router-progressbar :options="options" /> <!-- this instance config -->
 ```
 
