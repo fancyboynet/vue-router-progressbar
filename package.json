@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "rubik build --lib",
-    "build:demo": "cross-env BUILD_DEMO=true rubik build --lib",
+    "build:gh": "cross-env GH_PAGES=true rubik build --lib",
     "start": "rubik serve --lib",
     "lint": "rubik lint --fix",
     "stylelint": "rubik stylelint --fix"

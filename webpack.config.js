@@ -1,17 +1,17 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const isBuildDemo = !!process.env.BUILD_DEMO
+const isGH = !!process.env.GH_PAGES
 
 module.exports = {
   output: {
     library: "VueRouterProgressBar",
-    path: isBuildDemo ? path.resolve('./demo-build') : undefined,
-    publicPath: isBuildDemo ? '' : undefined
+    path: isGH ? path.resolve('./gh-pages') : undefined,
+    publicPath: isGH ? '' : undefined
   },
-  entry: isBuildDemo ? {
+  entry: isGH ? {
     'index': './demo/index.js'
   } : undefined,
-  plugins: isBuildDemo ? [
+  plugins: isGH ? [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'demo/index.html')
     })
