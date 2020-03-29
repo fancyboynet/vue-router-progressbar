@@ -1,6 +1,6 @@
 {
   "name": "vue-router-progressbar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "module": "src/index.js",
@@ -8,7 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "rubik build --lib",
+    "build": "yarn build:lib & yarn build:demo",
+    "build:lib": "rubik build --lib",
+    "build:demo": "cross-env BUILD_DEMO=true rubik build --lib",
     "start": "rubik serve --lib",
     "lint": "rubik lint --fix",
     "stylelint": "rubik stylelint --fix"
@@ -17,6 +19,8 @@
   "author": "Fancy <fancyboynet@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.2",
+    "html-webpack-plugin": "^4.0.3",
     "husky": "latest",
     "lint-staged": "latest",
     "rubik-cli": "latest",
