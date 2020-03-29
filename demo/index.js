@@ -19,7 +19,6 @@ const routes = [
     { path: '/foo', component: Foo },
     { path: '/bar', component: Bar },
     { path: '/baz', component: Baz, beforeEnter:(to, from, next) => {
-        console.log('beforeEnter')
         setTimeout(() => {
             next()
         }, 9000)

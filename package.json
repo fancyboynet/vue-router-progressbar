@@ -8,8 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn build:lib & yarn build:demo",
-    "build:lib": "rubik build --lib",
+    "build": "rubik build --lib",
     "build:demo": "cross-env BUILD_DEMO=true rubik build --lib",
     "start": "rubik serve --lib",
     "lint": "rubik lint --fix",
